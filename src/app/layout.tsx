@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Cutive_Mono } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const cutive = Cutive_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "kptankhoa",
@@ -16,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={cutive.className}>{children}</body>
     </html>
   );
 }

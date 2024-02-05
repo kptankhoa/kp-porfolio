@@ -1,33 +1,90 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css?family=Raleway");
-@import url("https://fonts.cdnfonts.com/css/technology?styles=26651");
-@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-color: #000;
+  --background-color: #fff;
+  --glow-color: #14532d;
+  --highlight-text: #059669;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-color: #fff;
+    --background-color: #000;
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  color: var(--foreground-color);
+  background: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+@media (max-width: 1440px) {
+  .glowing-txt {
+    font-size: 20px;
   }
+}
+
+@media (max-width: 1024px) {
+  .glowing-txt {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .glowing-txt {
+    font-size: 1rem;
+    letter-spacing: 6px;
+  }
+}
+
+@media (max-width: 576px) {}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 8px 32px 0 var(--glow-color);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px 0 solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+nav {
+  padding: 20px 30px;
+}
+
+.logo {
+  font-size: 22px;
+  color: var(--foreground-color);
+}
+
+.logo span span {
+  color: var(--highlight-text);
+}
+
+.menu a {
+  display: block;
+  padding: 7px 15px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.2s all ease-in-out;
+  color: var(--foreground-color);
+}
+
+.menu a::first-letter {
+  color: var(--highlight-text);
+  font-size: 20px;
+}
+
+.menu a:hover {
+  transform: scale(1.1);
 }
