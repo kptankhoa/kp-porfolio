@@ -1,11 +1,14 @@
-import Image from "next/image";
+import { Header } from "@components";
+import { summaryData } from "@data";
 
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen p-24">
-      <div>
-        Khoa
-      </div>
+    <main>
+      <Header
+        firstName={summaryData.firstName}
+        lastName={summaryData.lastName}
+      />
     </main>
   );
 }
