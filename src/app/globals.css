@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
 
 :root {
   --foreground-color: #1f2937;
@@ -17,7 +16,7 @@
     --background-color: #000;
     --glow-color: #14532d;
     --highlight-text: #059669;
-    --button: #10b981;
+    --button: #34d399;
   }
 }
 
@@ -28,6 +27,7 @@ body {
   flex-direction: column;
   margin: 0;
   height: 100vh;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 @media (max-width: 1440px) {
@@ -79,7 +79,7 @@ nav {
 
 .menu a {
   display: block;
-  padding: 7px 15px;
+  padding: 8px 16px;
   font-size: 18px;
   font-weight: 600;
   transition: 0.2s all ease-in-out;
@@ -88,24 +88,19 @@ nav {
 
 .menu a::first-letter {
   color: var(--highlight-text);
-  font-size: 20px;
 }
 
-.menu a:hover {
+.menu a:not(.menu-btn):hover {
   transform: scale(1.1);
 }
 
 .menu-btn {
   background: var(--button);
   border-radius: 16px;
-  transition: 0.3s all ease-in-out;
 }
 
 .menu-btn:hover {
   background: #9ca3af;
-}
-
-.menu-btn a:hover {
   transform: none;
 }
 
@@ -160,4 +155,24 @@ nav {
   max-width: 150px;
   max-height: 150px;
   border-radius: 50%;
+}
+
+.hero-typewriter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 8px;
+  font-size: 40px;
+}
+
+.typewriter {
+  color: var(--highlight-text);
+}
+
+@media (max-width: 768px) {
+  .hero-typewriter {
+    font-size: 25px;
+  }
 }

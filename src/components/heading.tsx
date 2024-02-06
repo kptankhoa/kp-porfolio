@@ -6,7 +6,7 @@ interface Props {
 
 const Heading = (props: Props) => {
   return (
-    <div className="heading hero-text">
+    <div className="heading">
       <h1>
         {props.firstWord}
         <span>{props.secondWord}</span>

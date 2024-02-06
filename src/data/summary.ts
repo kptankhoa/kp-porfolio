@@ -3,5 +3,10 @@ export const summaryData = {
   lastName: "Phan",
   title: "About Me",
   img: "https://bucket.kptankhoa.dev/KPrune.jpg",
+  resumeUrl: "https://resume.kptankhoa.dev",
   description: "Hi I'm Khoa 💻",
+  iAm: [
+    "Fullstack Developer",
+    "Tech Enthusiast"
+  ]
 };

@@ -8,9 +8,11 @@ export default function Home() {
       <Header
         firstName={summaryData.firstName}
         lastName={summaryData.lastName}
+        resume={summaryData.resumeUrl}
       />
       <About
         img={summaryData.img}
+        typewriter={summaryData.iAm}
       />
     </main>
   );

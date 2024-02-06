@@ -1,4 +1,7 @@
+import { OpenInNew } from '@mui/icons-material';
+
 interface Props {
+  resume: string;
   firstName: string;
   lastName: string;
 }
@@ -24,17 +27,23 @@ const Header = (props: Props) => (
           <a href="#">About</a>
         </li>
         <li>
+          <a href="#experiences">Experiences</a>
+        </li>
+        <li>
           <a href="#projects">Projects</a>
         </li>
         <li>
           <a href="#skills">Skills</a>
         </li>
-        <li className="menu-btn">
-          <a href="https://resume.kptankhoa.dev" target="_blank">My Resume</a>
+        <li>
+          <a href={props.resume} target="_blank" className="menu-btn">
+            My Resume&nbsp;
+            <OpenInNew className="text-xl" />
+          </a>
         </li>
       </ul>
     </nav>
-  </header>
+  </header >
 );
 
 export default Header;

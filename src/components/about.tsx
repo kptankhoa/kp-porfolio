@@ -1,9 +1,11 @@
 "use client";
+import Typewriter from "typewriter-effect"
 import { motion } from "framer-motion";
 import { Heading } from "@components"
 
 interface Props {
   img: string;
+  typewriter: string[]
 }
 
 const About = (props: Props) => {
@@ -26,6 +28,17 @@ const About = (props: Props) => {
 
       <Heading firstWord="About" secondWord="Me" />
 
+      <div className="hero-typewriter">
+        <h3>I am</h3>
+        <Typewriter
+          options={{
+            strings: props.typewriter,
+            autoStart: true,
+            loop: true,
+            wrapperClassName: "typewriter"
+          }}
+        />
+      </div>
     </div>
   )
 };
