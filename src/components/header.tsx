@@ -22,7 +22,12 @@ const Header = (props: Props) => (
         </span>
       </div>
 
-      <ul className="menu flex justify-center items-center">
+      <input type="checkbox" id="menu-toggle" />
+      <label htmlFor="menu-toggle" className="menu-icon">
+        &#9776;
+      </label>
+
+      <ul className="menu">
         <li>
           <a href="#">About</a>
         </li>

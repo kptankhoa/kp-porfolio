@@ -5,6 +5,7 @@
 :root {
   --foreground-color: #1f2937;
   --background-color: #e5e7eb;
+  --background-color-opa: #e5e7ebcc;
   --glow-color: #6ee7b7;
   --highlight-text: #10b981;
   --button: #6ee7b7;
@@ -14,6 +15,7 @@
   :root {
     --foreground-color: #fff;
     --background-color: #000;
+    --background-color-opa: #000000cc;
     --glow-color: #14532d;
     --highlight-text: #059669;
     --button: #34d399;
@@ -55,8 +57,7 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  background: var(--background-color);
-  opacity: 0.8;
+  background: var(--background-color-opa);
   box-shadow: 0 8px 32px 0 var(--glow-color);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
@@ -75,6 +76,24 @@ nav {
 
 .logo span span {
   color: var(--highlight-text);
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked~.menu {
+  transform: scale(1, 1);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .menu a {
@@ -102,6 +121,46 @@ nav {
 .menu-btn:hover {
   background: #9ca3af;
   transform: none;
+}
+
+@media only screen and (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    background: var(--background-color-opa);
+    box-shadow: 0 8px 32px 0 var(--glow-color);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px 0 solid var(--background-color);
+
+    align-items: start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu a {
+    margin-left: 12px;
+  }
+
+  .menu li {
+    margin: 4px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: var(--foreground-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-btn {
+    margin-bottom: 12px;
+  }
 }
 
 .hero-text {
