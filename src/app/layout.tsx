@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Cutive_Mono } from "next/font/google";
+import { Cutive_Mono, Ubuntu_Mono } from "next/font/google";
 import "./globals.css";
 
 const cutive = Cutive_Mono({
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   weight: "400"
 });
+
+const ubuntu = Ubuntu_Mono({
+  subsets: ["latin"],
+  weight: ["400"]
+})
 
 export const metadata: Metadata = {
   title: "kptankhoa",
@@ -19,7 +24,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cutive.className}>{children}</body>
+      <body className={`${ubuntu.className} ${cutive.className}`}>{children}</body>
     </html>
   );
 }

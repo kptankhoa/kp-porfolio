@@ -29,6 +29,9 @@ const Header = (props: Props) => (
         <li>
           <a href="#skills">Skills</a>
         </li>
+        <li className="menu-btn">
+          <a href="https://resume.kptankhoa.dev" target="_blank">My Resume</a>
+        </li>
       </ul>
     </nav>
   </header>
