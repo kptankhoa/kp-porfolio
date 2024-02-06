@@ -1,6 +1,3 @@
-import Image from 'next/image'
-import logo from '../../public/kp-rune.png'
-
 interface Props {
   firstName: string;
   lastName: string;
@@ -10,8 +7,8 @@ const Header = (props: Props) => (
   <header className="header">
     <nav className="flex justify-between items-center w-full">
       <div className="logo flex gap-3 items-center">
-        <Image
-          src={logo}
+        <img
+          src="/kp-rune.png"
           width={36}
           height={36}
           alt="KP"

@@ -2,6 +2,6 @@ export const summaryData = {
   firstName: "Khoa",
   lastName: "Phan",
   title: "About Me",
-  img: "",
-  description: "Hi I'm Khoa",
+  img: "https://bucket.kptankhoa.dev/KPrune.jpg",
+  description: "Hi I'm Khoa 💻",
 };
