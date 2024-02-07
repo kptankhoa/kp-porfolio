@@ -6,7 +6,7 @@ export const summaryData = {
   resumeUrl: "https://resume.kptankhoa.dev",
   description: "Hi I'm Khoa 💻",
   iAm: [
-    "Fullstack Developer",
-    "Tech Enthusiast"
+    "A Fullstack Developer",
+    "A Tech Enthusiast"
   ]
 };

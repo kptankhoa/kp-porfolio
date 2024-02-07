@@ -1,4 +1,5 @@
 import { OpenInNew } from '@mui/icons-material';
+import './header.css';
 
 interface Props {
   resume: string;

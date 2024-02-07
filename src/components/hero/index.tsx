@@ -2,13 +2,14 @@
 import Typewriter from "typewriter-effect"
 import { motion } from "framer-motion";
 import { Heading } from "@components"
+import "./hero.css";
 
 interface Props {
   img: string;
   typewriter: string[]
 }
 
-const About = (props: Props) => {
+const Hero = (props: Props) => {
   return (
     <div>
 
@@ -46,4 +47,4 @@ const About = (props: Props) => {
   )
 };
 
-export default About;
+export default Hero;

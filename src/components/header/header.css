@@ -1,0 +1,109 @@
+nav {
+  padding: 20px 30px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--background-color-opa);
+  box-shadow: 0 8px 32px 0 var(--glow-color);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border: 1px 0 solid rgba(255, 255, 255, 0.18);
+  z-index: 1;
+}
+
+.logo {
+  font-size: 22px;
+  color: var(--foreground-color);
+}
+
+.logo span span {
+  color: var(--highlight-text);
+}
+
+.menu-icon {
+  display: none;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+#menu-toggle:checked~.menu {
+  transform: scale(1, 1);
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.2s all ease-in-out;
+  color: var(--foreground-color);
+}
+
+.menu a::first-letter {
+  color: var(--highlight-text);
+}
+
+.menu a:not(.menu-btn):hover {
+  transform: scale(1.1);
+}
+
+.menu-btn {
+  background: var(--button);
+  border-radius: 16px;
+}
+
+.menu-btn:hover {
+  background: #9ca3af;
+  transform: none;
+}
+
+@media only screen and (max-width: 950px) {
+  .menu {
+    flex-direction: column;
+    background: var(--background-color-opa);
+    box-shadow: 0 8px 32px 0 var(--glow-color);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px 0 solid var(--background-color);
+
+    align-items: start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .menu a {
+    margin-left: 12px;
+  }
+
+  .menu li {
+    margin: 4px;
+  }
+
+  .menu-icon {
+    display: block;
+    color: var(--foreground-color);
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .menu-btn {
+    margin-bottom: 12px;
+  }
+}

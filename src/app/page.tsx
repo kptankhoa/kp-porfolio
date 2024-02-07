@@ -1,4 +1,4 @@
-import { About, Header } from "@components";
+import { Hero, Header } from "@components";
 import { summaryData } from "@data";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
         lastName={summaryData.lastName}
         resume={summaryData.resumeUrl}
       />
-      <About
+      <Hero
         img={summaryData.img}
         typewriter={summaryData.iAm}
       />
