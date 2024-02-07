@@ -1,4 +1,4 @@
-import "./heading.css";
+import './heading.css';
 
 interface Props {
   firstWord: string;

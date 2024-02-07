@@ -1,5 +1,5 @@
-import { Hero, Header } from "@components";
-import { summaryData } from "@data";
+import { Hero, Header } from '@components';
+import { summaryData } from '@data';
 
 export default function Home() {
 
@@ -12,6 +12,7 @@ export default function Home() {
       />
       <Hero
         img={summaryData.img}
+        description={summaryData.description}
         typewriter={summaryData.iAm}
       />
     </main>
