@@ -71,7 +71,7 @@
 
 .hero-socials a {
   padding: 12px;
-  background: rgba(5, 0, 0, 0.3);
+  background: var(--background-color-opa);
   box-shadow: 0 8px 32px 0 var(--glow-color);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);

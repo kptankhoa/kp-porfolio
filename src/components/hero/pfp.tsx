@@ -6,12 +6,13 @@ const PFP = ({ img }: { img: string }) => (
     </div>
     <motion.div
       initial={{ scale: 0 }}
-      animate={{ rotate: 360, scale: 1 }}
-      whileHover={{ scale: 1.3, rotate: 10 }}
+      animate={{ rotate: [0, 180, 360], scale: [0.9, 1, 1.2] }}
+      whileHover={{ scale: 1.3, rotate: 720 }}
       whileTap={{
         scale: 0.8,
-        rotate: -90
+        rotate: 360
       }}
+      transition={{ duration: 0.5 }}
       className="pfp"
     >
       <img src={img} alt="KP pic" />
