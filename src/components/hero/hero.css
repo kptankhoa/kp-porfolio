@@ -1,3 +1,22 @@
+.hero {
+  position: relative;
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -10;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url("https://bucket.kptankhoa.dev/bg.jpg");
+
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .pfp {
   display: flex;
   justify-content: center;
@@ -40,7 +59,8 @@
 }
 
 .hero-text {
-  margin-top: 50px;
+  margin-top: 30px;
+  padding-bottom: 20px;
 }
 
 .hero-text p {

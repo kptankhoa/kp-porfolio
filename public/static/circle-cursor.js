@@ -8,7 +8,7 @@ const circleElement = document.querySelector('.circle');
 
 // Create objects to track mouse position and custom cursor position
 const mouse = { x: 0, y: 0 }; // Track current mouse position
-const previousMouse = { x: 0, y: 0 } // Store the previous mouse position
+const previousMouse = { x: 0, y: 0 }; // Store the previous mouse position
 const circle = { x: 0, y: 0 }; // Track the circle position
 
 // Initialize variables to track scaling and rotation
@@ -19,6 +19,13 @@ let currentAngle = 0; // Track current angle value
 window.addEventListener('mousemove', (e) => {
   mouse.x = e.x;
   mouse.y = e.y;
+
+  circleElement.style.display = 'block';
+
+  // Hide the div after a certain time (e.g., 2 seconds)
+  setTimeout(function() {
+    circleElement.style.display = 'none';
+  }, 300);
 });
 
 // Smoothing factor for cursor movement speed (0 = smoother, 1 = instant)
@@ -64,7 +71,7 @@ const tick = () => {
 
   // Request the next frame to continue the animation
   window.requestAnimationFrame(tick);
-}
+};
 
 // Start the animation loop
 tick();

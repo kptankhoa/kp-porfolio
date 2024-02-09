@@ -9,4 +9,5 @@
   left: calc(var(--circle-size) / 2 * -1);
   pointer-events: none;
   z-index: 100;
+  display: none;
 }

@@ -30,7 +30,7 @@ const Header = (props: Props) => (
 
       <ul className="menu">
         <li>
-          <a href="#">About</a>
+          <a href="#about">About</a>
         </li>
         <li>
           <a href="#experiences">Experiences</a>
