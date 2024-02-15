@@ -14,7 +14,7 @@ interface Props {
 const Hero = (props: Props) => {
   return (
     <div id="about" className="hero">
-      <div className="hero-bg" />
+      <div className="hero-bgc hero-bg" />
       <PFP img={props.img} />
       <Heading firstWord="About" secondWord="Me" />
       <TextTypewriter strings={props.typewriter} />

@@ -25,7 +25,7 @@ window.addEventListener('mousemove', (e) => {
   // Hide the div after a certain time (e.g., 2 seconds)
   setTimeout(function() {
     circleElement.style.display = 'none';
-  }, 300);
+  }, 500);
 });
 
 // Smoothing factor for cursor movement speed (0 = smoother, 1 = instant)

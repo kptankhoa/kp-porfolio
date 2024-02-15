@@ -7,11 +7,15 @@ const SocialLinks = ({ description }: { description: string }) => (
     </div>
     Find me on:
     <div className="hero-socials flex justify-center items-center pt-3">
-      {socials.map((social, index) => (
-        <a key={index} href={social.url} target="_blank">
-          <img src={`/socials/${social.icon}`} alt="" />
-        </a>
-      ))}
+      {socials.map((social, index) => {
+        const Element = social.icon;
+
+        return (
+          <a key={index} href={social.url} target="_blank">
+            <Element />
+          </a>
+        );
+      })}
     </div>
   </div>
 );
