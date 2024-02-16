@@ -31,10 +31,20 @@
   margin-top: 30px;
 }
 
+.pfp div {
+  transition: all 0.5s ease-in-out;
+  border-radius: 50%;
+}
+
+.pfp div:hover {
+  box-shadow: 0 0 12px 12px var(--glow-color);
+}
+
 .pfp img {
   max-width: 150px;
   max-height: 150px;
   border-radius: 50%;
+
 }
 
 .hero-typewriter {

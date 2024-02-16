@@ -15,7 +15,9 @@ const PFP = ({ img }: { img: string }) => (
       transition={{ duration: 0.5 }}
       className="pfp"
     >
-      <img src={img} alt="KP pic" className="unclickable"/>
+      <div>
+        <img src={img} alt="KP pic" className="unclickable"/>
+      </div>
     </motion.div>
   </div>
 );
