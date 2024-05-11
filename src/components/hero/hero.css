@@ -10,6 +10,14 @@
   z-index: -10;
 }
 
+.hero-star {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+}
+
 .hero-bg {
   filter: blur(8px);
   -webkit-filter: blur(8px);
@@ -98,7 +106,7 @@
 }
 
 .hero-socials svg {
-  transition: 0.3s all ease-in-out;
+  transition: 0.2s all ease-in-out;
 }
 
 .hero-socials svg:hover {

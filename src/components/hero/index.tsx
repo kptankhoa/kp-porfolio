@@ -1,5 +1,5 @@
 'use client';
-import { Heading } from '@components';
+import { Heading, StarsCanvas } from '@components';
 import PFP from './pfp';
 import TextTypewriter from './typewriter';
 import SocialLinks from './social-links';
@@ -15,6 +15,7 @@ const Hero = (props: Props) => {
   return (
     <div id="about" className="hero">
       <div className="hero-bgc hero-bg" />
+      <StarsCanvas />
       <PFP img={props.img} />
       <Heading firstWord="About" secondWord="Me" />
       <TextTypewriter strings={props.typewriter} />
