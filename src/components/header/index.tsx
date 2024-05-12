@@ -1,55 +1,60 @@
-import { OpenInNew } from '@mui/icons-material';
+'use client';
+import { usePathname } from 'next/navigation';
+import clsx from 'clsx';
+import Link from 'next/link';
 import './header.css';
 
 interface Props {
-  resume: string;
   firstName: string;
   lastName: string;
+  navItems: {
+    url: string;
+    label: string;
+  }[];
 }
 
-const Header = (props: Props) => (
-  <header className="header">
-    <nav className="flex justify-between items-center w-full">
-      <div className="logo flex gap-3 items-center">
-        <img
-          src="/kp-rune.png"
-          width={36}
-          height={36}
-          alt="KP"
-        />
-        <span className="font-bold">
-          {props.firstName}
-          <span className="">{props.lastName}</span>
-        </span>
-      </div>
+const Header = (props: Props) => {
+  const { firstName, lastName, navItems } = props;
+  const pathname = usePathname();
 
-      <input type="checkbox" id="menu-toggle" />
-      <label htmlFor="menu-toggle" className="menu-icon">
-        &#9776;
-      </label>
+  return (
+    <header className="header">
+      <nav className="flex justify-between items-center w-full">
+        <Link href="/">
+          <div className="logo unclickable flex gap-3 items-center">
+            <img
+              src="/kp-rune.png"
+              width={36}
+              height={36}
+              alt="KP"
+            />
+            <span className="font-bold">
+              {firstName}
+              <span>{lastName}</span>
+            </span>
+          </div>
+        </Link>
 
-      <ul className="menu">
-        <li>
-          <a href="#about">About</a>
-        </li>
-        <li>
-          <a href="#experiences">Experiences</a>
-        </li>
-        <li>
-          <a href="#projects">Projects</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href={props.resume} target="_blank" className="menu-btn">
-            My Resume&nbsp;
-            <OpenInNew className="text-xl" />
-          </a>
-        </li>
-      </ul>
-    </nav>
-  </header >
-);
+        <input type="checkbox" id="menu-toggle"/>
+        <label htmlFor="menu-toggle" className="menu-icon">
+          &#9776;
+        </label>
+
+        <ul className="menu">
+          {navItems.map((item) => (
+            <li key={item.url}>
+              <Link
+                href={item.url}
+                className={clsx({ 'menu-btn': pathname === item.url })}
+              >
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header >
+  );
+};
 
 export default Header;

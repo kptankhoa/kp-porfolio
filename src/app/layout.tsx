@@ -1,6 +1,8 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { Cutive_Mono } from 'next/font/google';
+import { CircleCursor, Header } from '@components';
+import { navItems, summaryData } from '@data';
 import './globals.css';
 
 const cutive = Cutive_Mono({
@@ -23,7 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cutive.className}>{children}</body>
+      <body className={cutive.className}>
+        <main>
+          <CircleCursor />
+          <Header
+            firstName={summaryData.firstName}
+            lastName={summaryData.lastName}
+            navItems={navItems}
+          />
+          {children}
+        </main>
+      </body>
     </html>
   );
 }
